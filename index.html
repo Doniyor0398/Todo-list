@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ! google fonts  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./source/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <head>
+        <h1 class="head__title">Todo List</h1>
+      </head>
+      <main class="main">
+        <div class="todoList__body">
+          <div class="todoList__row">
+            <input
+              type="text"
+              placeholder="Добавить новую задачу"
+              class="todoList__row__input"
+            />
+            <input type="date" class="todoList__row__date" />
+            <button class="todoList__row__buttonAdd" onclick="addTodo()">
+              +
+            </button>
+          </div>
+        </div>
+        <p class="main__error"></p>
+        <div class="main__result"></div>
+      </main>
+      <footer>
+        <h4>Abdurasulov Doniyorbek</h4>
+      </footer>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
