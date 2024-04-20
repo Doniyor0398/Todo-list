@@ -4,15 +4,15 @@
   padding: 0;
   margin: 0;
   border: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all 2s; }
 
 html,
 body {
   background: #0d0714;
   color: white;
   width: 100%;
-  height: 100vh;
-  font-family: "Lora", serif; }
+  height: 100vh; }
 
 .wrapper {
   width: 100%;
@@ -28,7 +28,7 @@ body {
   color: white;
   font-family: "Italiana", sans-serif;
   text-align: center;
-  font-size: calc(65px + 35 * (100vw - 320px) / 1280);
+  font-size: calc(56px + 35 * (100vw - 320px) / 1280);
   font-weight: 400;
   padding: 30px; }
 
@@ -43,10 +43,24 @@ main {
 
 .todoList__row {
   display: flex;
+  flex-wrap: wrap;
   width: 100%; }
+
+.todoList__row__container__span__input {
+  position: relative; }
+
+.todoList__row__calendar {
+  position: absolute;
+  right: 41px;
+  bottom: 4px;
+  top: 19px;
+  cursor: pointer;
+  pointer-events: none;
+  display: block; }
 
 .todoList__row__input,
 .todoList__row__date {
+  cursor: pointer;
   box-sizing: border-box;
   border: 1px solid #3e1671;
   border-radius: 10px;
@@ -70,6 +84,11 @@ main {
   width: 10%;
   font-size: 40px; }
 
+.main__error {
+  font-family: "Italiana", sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+
 .main__result__sub {
   border-radius: 10px;
   background: #15101c;
@@ -85,7 +104,8 @@ main {
   align-items: center;
   opacity: 3; }
   .main__result__sub button {
-    background: transparent; }
+    background: transparent;
+    cursor: pointer; }
     .main__result__sub button img {
       padding: 0 0 0 5px;
       width: 50px;
@@ -93,4 +113,6 @@ main {
       margin: 0 20px; }
 
 footer {
-  background: #212121; }
+  color: white;
+  font-family: "Italiana", sans-serif;
+  padding: 20px; }

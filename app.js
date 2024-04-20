@@ -1,4 +1,4 @@
-let todoListArray = [{ todoName: "Doniyorbek", dueDate: "24-02-2343" }];
+let todoListArray = [];
 let getTodoListArray = localStorage.getItem("todoListArray");
 
 if (getTodoListArray) {
@@ -16,14 +16,14 @@ function renderTodoList() {
 
     let html = `
 		<p class="main__result__sub">
-      ${todoName} - ${dueDate}
+      ${todoName} &nbsp;&nbsp; ${dueDate}
 
         <button 
           onclick="
           todoListArray.splice(${[i]},1)
           localStorage.removeItem('todoListArray');
           renderTodoList();          
-          "><img src="./img/deleteIcon.svg"/>
+          ">&nbsp;&nbsp;<img src="./img/deleteIcon.svg"/>
         </button>
 		</p>
   `;
@@ -39,11 +39,12 @@ btnAdd.setAttribute("disabled", "");
 btnAdd.style.opacity = "0.3";
 
 inputElement.oninput = function () {
-  if (inputElement.value.length === 0) {
+  if (inputElement.value.trim().length === 0) {
     btnAdd.setAttribute("disabled", "");
     return;
   } else {
-    btnAdd.removeAttribute("disabled");
+    btnAdd.removeAttribute("disabled", "");
+    btnAdd.style.cursor = "pointer";
     btnAdd.style.opacity = "1";
   }
 };
@@ -56,8 +57,7 @@ function addTodo() {
   const todoName = inputElement.value.trim();
   const dueDate = inputDueData.value;
 
-  /*   if (todoName === "") {
-    // alert("Заполните пожалуйста поле, с текстом 🗒 и датой 📅");
+  if (inputElement.value === "") {
     errorElement.innerHTML =
       "Заполните пожалуйста поле, с текстом 🗒 и датой 📅";
     return;
@@ -66,7 +66,7 @@ function addTodo() {
     errorElement.innerHTML = "Заполните пожалуйста поле, с датой 📅";
     return;
   }
-  errorElement.innerHTML = ""; */
+  errorElement.innerHTML = "";
 
   todoListArray.push({ todoName, dueDate });
   inputElement.value = "";
@@ -76,12 +76,9 @@ function addTodo() {
     btnAdd.setAttribute("disabled", "");
   } else {
     btnAdd.removeAttribute("disabled", "");
-    btnAdd.style.opacity = "10";
+    btnAdd.style.cursor = "pointer";
   }
   renderTodoList();
   // ! SET LOCAL STORAGE
-  let setTodoLocal = localStorage.setItem(
-    "todoListArray",
-    JSON.stringify(todoListArray)
-  );
+  localStorage.setItem("todoListArray", JSON.stringify(todoListArray));
 }
