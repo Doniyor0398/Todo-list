@@ -75,6 +75,7 @@ main {
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
 
 	&::placeholder {
+		color: #e91e63;
 		font-size: calc(20px + 4 * (100vw - 320px) / 1280);
 	}
 }
@@ -183,5 +184,6 @@ footer {
 	.todoList__row__date {
 		width: 100%;
 		height: 63px;
+		color: #e91e63;
 	}
 }
