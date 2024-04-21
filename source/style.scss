@@ -187,3 +187,9 @@ footer {
 		color: #e91e63;
 	}
 }
+@media (max-width: 320px) {
+	.todoList__row__input,
+	.todoList__row__date {
+		width: 100%;
+	}
+}
