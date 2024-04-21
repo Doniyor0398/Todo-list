@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://doniyor0398.github.io/TodoList/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ! google fonts  -->
+    <link rel="icon" href="https://doniyor0398.github.io/TodoList/img/todo-list_icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Todo-List_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Todo-List_files/style.css">
+    <title>Todo-List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+        <h1 class="head__title">Todo List</h1>
+      
+      <main class="main">
+        <div class="todoList__body">
+          <div class="todoList__row">
+            <input type="text" placeholder="Добавить новую задачу" class="todoList__row__input">
+            <div class="todoList__row__container__span__input">
+              <input type="date" class="todoList__row__date"><span class="todoList__row__calendar">📅</span>
+            </div>
+
+            <button class="todoList__row__buttonAdd" onclick="addTodo()" disabled="" style="opacity: 0.3;">
+              +
+            </button>
+          </div>
+        </div>
+        <p class="main__error"></p>
+        <div class="main__result"></div>
+      </main>
+      <footer>
+        <h4>
+          <span style="color: #4c5a68">Основатель</span> Abdurasulov Doniyorbek
+        </h4>
+      </footer>
+    </div>
+    <script src="./Todo-List_files/app.js"></script>
+  
+
+</body></html>
