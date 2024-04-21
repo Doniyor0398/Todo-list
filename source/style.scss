@@ -56,9 +56,8 @@ main {
 }
 .todoList__row__calendar {
 	position: absolute;
+	top: 20px;
 	right: 41px;
-	bottom: 4px;
-	top: 19px;
 	cursor: pointer;
 	pointer-events: none;
 	display: block;
@@ -172,6 +171,10 @@ footer {
 	}
 	.todoList__row__buttonAdd {
 		margin: 0px 0 0 0;
+	}
+	.todoList__row__calendar {
+		top: 29px;
+		right: 20px;
 	}
 }
 @media (max-width: 529px) {
