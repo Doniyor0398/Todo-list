@@ -15,17 +15,19 @@ function renderTodoList() {
     let { todoName, dueDate } = todoListArrayvalue;
 
     let html = `
-		<p class="main__result__sub">
-      ${todoName} &nbsp;&nbsp; ${dueDate}
-
+		<div class="main__result__sub">
+      ${todoName} &nbsp;&nbsp; 
+      <div class="main__result__body">
+        <span>${dueDate}</span>
         <button 
           onclick="
           todoListArray.splice(${[i]},1)
           localStorage.removeItem('todoListArray');
           renderTodoList();          
-          ">&nbsp;&nbsp;<img src="./img/deleteIcon.svg"/>
+          ">Удалить<img src="./img/deleteIcon.svg"/>
         </button>
-		</p>
+      </div>
+     </div>
   `;
 
     todoListHTML += html;
@@ -51,33 +53,28 @@ inputElement.oninput = function () {
 
 function addTodo() {
   const inputDueData = document.querySelector(".todoList__row__date");
+  const inputElement = document.querySelector(".todoList__row__input");
   const errorElement = document.querySelector(".main__error");
-  errorElement.style.color = "red";
-
   const todoName = inputElement.value.trim();
   const dueDate = inputDueData.value;
 
+  errorElement.style.color = "red";
+
   if (inputElement.value === "") {
-    errorElement.innerHTML =
-      "Заполните пожалуйста поле, с текстом 🗒 и датой 📅";
+    errorElement.innerHTML = "Пожалуйста, заполните поля, 🗒";
     return;
   } else if (inputDueData.value === "") {
-    // alert("Заполните пожалуйста поле, с датой 📅");
-    errorElement.innerHTML = "Заполните пожалуйста поле, с датой 📅";
+    errorElement.innerHTML = "Пожалуйста, заполните поля 📅";
+
+    errorElement.style.padding = "20px";
     return;
   }
-  errorElement.innerHTML = "";
 
+  errorElement.innerHTML = "";
   todoListArray.push({ todoName, dueDate });
   inputElement.value = "";
   inputDueData.value = "";
 
-  if (inputElement.value === "") {
-    btnAdd.setAttribute("disabled", "");
-  } else {
-    btnAdd.removeAttribute("disabled", "");
-    btnAdd.style.cursor = "pointer";
-  }
   renderTodoList();
   // ! SET LOCAL STORAGE
   localStorage.setItem("todoListArray", JSON.stringify(todoListArray));
