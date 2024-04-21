@@ -70,7 +70,7 @@ main {
   font-size: calc(23px + 1 * (100vw - 320px) / 1280); }
   .todoList__row__input::placeholder,
   .todoList__row__date::placeholder {
-    font-size: calc(23px + 1 * (100vw - 320px) / 1280);
+    font-size: calc(20px + 4 * (100vw - 320px) / 1280);
     color: white; }
 
 .todoList__row__input {
@@ -142,8 +142,10 @@ main {
 
 footer {
   color: white;
-  font-family: "Italiana", sans-serif;
-  padding: 20px; }
+  font-family: "Italiana", sans-serif; }
+  footer h4 {
+    text-align: center;
+    padding: 10px; }
 
 @media (max-width: 651px) {
   .todoList__row {

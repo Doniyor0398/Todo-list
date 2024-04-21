@@ -10,28 +10,31 @@ renderTodoList();
 function renderTodoList() {
   let todoListHTML = "";
 
-  for (i = 0; i < todoListArray.length; i++) {
-    let todoListArrayvalue = todoListArray[i];
-    let { todoName, dueDate } = todoListArrayvalue;
+  if (todoListArray) {
+    for (let i = 0; i < todoListArray.length; i++) {
+      let todoListArrayvalue = todoListArray[i];
+      let { todoName, dueDate } = todoListArrayvalue;
 
-    let html = `
-		<div class="main__result__sub">
-      ${todoName} &nbsp;&nbsp; 
-      <div class="main__result__body">
-        <span>${dueDate}</span>
-        <button 
-          onclick="
-          todoListArray.splice(${[i]},1)
-          localStorage.removeItem('todoListArray');
-          renderTodoList();          
-          ">Удалить<img src="./img/deleteIcon.svg"/>
-        </button>
+      let html = `
+      <div class="main__result__sub">
+        ${todoName} &nbsp;&nbsp; 
+        <div class="main__result__body">
+          <span>${dueDate}</span>
+          <button 
+            onclick="
+            todoListArray.splice(${i}, 1);
+            localStorage.setItem('todoListArray', JSON.stringify(todoListArray));
+            renderTodoList();          
+            ">Удалить<img src="./img/deleteIcon.svg"/>
+          </button>
+        </div>
       </div>
-     </div>
-  `;
+      `;
 
-    todoListHTML += html;
+      todoListHTML += html;
+    }
   }
+
   document.querySelector(".main__result").innerHTML = todoListHTML;
 }
 
@@ -71,7 +74,12 @@ function addTodo() {
   }
 
   errorElement.innerHTML = "";
-  todoListArray.push({ todoName, dueDate });
+
+  if (todoListArray) {
+    todoListArray.push({ todoName, dueDate });
+  } else {
+    todoListArray = [{ todoName, dueDate }];
+  }
   inputElement.value = "";
   inputDueData.value = "";
 

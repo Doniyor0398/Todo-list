@@ -70,12 +70,12 @@ main {
 	border-radius: 10px;
 	background: transparent;
 	color: white;
-
 	padding: 17px;
 	font-family: inherit;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
+
 	&::placeholder {
-		font-size: calc(23px + 1 * (100vw - 320px) / 1280);
+		font-size: calc(20px + 4 * (100vw - 320px) / 1280);
 		color: white;
 	}
 }
@@ -159,7 +159,10 @@ main {
 footer {
 	color: white;
 	font-family: "Italiana", sans-serif;
-	padding: 20px;
+	h4 {
+		text-align: center;
+		padding: 10px;
+	}
 }
 @media (max-width: 651px) {
 	.todoList__row {
