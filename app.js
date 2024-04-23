@@ -96,6 +96,8 @@ function qntTodoList() {
 qntTodoList();
 
 // ! Добавление задач при клике на кнопку Добавить
+
+document.querySelector(".todoList__row__date").valueAsDate = new Date();
 function addTodo() {
   const inputDueData = document.querySelector(".todoList__row__date");
   const inputElement = document.querySelector(".todoList__row__input");
