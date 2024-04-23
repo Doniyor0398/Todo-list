@@ -40,7 +40,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
+	padding: 30px 0;
 }
 .head__title {
 	color: white;
@@ -134,6 +134,7 @@ main {
 		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
 		text-align: left;
 	}
+	width: 100%;
 	min-width: 250px;
 }
 .todoList__row__input {
