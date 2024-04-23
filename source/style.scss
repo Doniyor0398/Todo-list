@@ -131,20 +131,19 @@ main {
 	color: white;
 	padding: 17px;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
-
-	&::placeholder {
-		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
-		text-align: left;
-	}
 }
+.todoList__row__input::placeholder,
+.todoList__row__date::placeholder {
+	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
+	color: white;
+}
+
 .todoList__row__input {
 	flex-grow: 5;
 	padding: 17px;
 }
 .todoList__row__date {
-	margin: 20px 17px;
 	margin: 0 20px;
-	flex-grow: 3;
 }
 
 .todoList__row__buttonAdd {
@@ -197,8 +196,7 @@ main {
 			filter: drop-shadow(0 0 20px red);
 		}
 	}
-	button,
-	.todoList__row__date {
+	button {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -237,6 +235,7 @@ footer {
 	}
 	.todoList__row__date {
 		margin: 0 0px 0 20px;
+		width: 100%;
 	}
 	.todoList__row__buttonAdd {
 		padding: 8px;
@@ -285,10 +284,6 @@ footer {
 	}
 }
 @media (max-width: 320px) {
-	.todoList__row__input,
-	.todoList__row__date {
-		width: 100%;
-	}
 	.main__result__sub {
 		justify-content: start;
 		button {
