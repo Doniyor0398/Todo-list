@@ -118,7 +118,8 @@ main {
   background: #00000038;
   color: white;
   padding: 17px;
-  font-size: calc(23px + 1 * (100vw - 320px) / 1280); }
+  font-size: calc(23px + 1 * (100vw - 320px) / 1280);
+  min-width: 250px; }
   .todoList__row__input::placeholder,
   .todoList__row__date::placeholder {
     font-size: calc(17px + 7 * (100vw - 320px) / 1280);
@@ -256,7 +257,8 @@ footer {
 @media (max-width: 320px) {
   .todoList__row__input,
   .todoList__row__date {
-    width: 100%; }
+    width: 100%;
+    min-width: 250px; }
 
   .main__result__sub {
     justify-content: start; }

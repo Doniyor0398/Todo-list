@@ -134,6 +134,7 @@ main {
 		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
 		text-align: left;
 	}
+	min-width: 250px;
 }
 .todoList__row__input {
 	flex-grow: 5;
@@ -293,6 +294,7 @@ footer {
 	.todoList__row__input,
 	.todoList__row__date {
 		width: 100%;
+		min-width: 250px;
 	}
 	.main__result__sub {
 		justify-content: start;
