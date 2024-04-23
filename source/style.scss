@@ -133,7 +133,6 @@ main {
 
 	&::placeholder {
 		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
-		text-align: left;
 	}
 }
 .todoList__row__input {
@@ -141,19 +140,18 @@ main {
 	padding: 17px;
 }
 .todoList__row__date {
-	margin: 20px 17px;
 	margin: 0 20px;
-	flex-grow: 3;
+	flex-grow: 5;
 }
 
-input[type="date"] {
-	color: #9e9e9e;
-	font-size: calc(18px + 6 * (100vw - 320px) / 1280);
-	text-align: left;
-}
-input[type="date"]:focus {
-	color: white;
-}
+// input[type="date"] {
+// 	color: #9e9e9e;
+// 	font-size: calc(18px + 6 * (100vw - 320px) / 1280);
+// 	text-align: left;
+// }
+// input[type="date"]:focus {
+// 	color: white;
+// }
 
 .todoList__row__buttonAdd {
 	border-radius: 10px;
@@ -205,8 +203,7 @@ input[type="date"]:focus {
 			filter: drop-shadow(0 0 20px red);
 		}
 	}
-	button,
-	.todoList__row__date {
+	button {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -261,7 +258,6 @@ footer {
 	}
 	.todoList__row__date {
 		margin: 10px 4px 10px 0px;
-		width: 100%;
 	}
 	.todoList__row__buttonAdd {
 		margin: 0px 0 0 0;
@@ -278,7 +274,6 @@ footer {
 		object-fit: contain;
 	}
 	.todoList__row__date {
-		width: 100%;
 		height: 63.5px;
 	}
 	.todoName {
