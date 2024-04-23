@@ -110,23 +110,28 @@ main {
     cursor: pointer;
     font-size: calc(15px + 5 * (100vw - 320px) / 1280); }
 
-.todoList__row__input {
+.todoList__row__input,
+.todoList__row__date {
   cursor: pointer;
   box-sizing: border-box;
   border: 1px solid #3e1671;
   border-radius: 10px;
   background: #00000038;
-  background: green;
   color: white;
   padding: 17px;
   font-size: calc(23px + 1 * (100vw - 320px) / 1280); }
-  .todoList__row__input::placeholder {
+  .todoList__row__input::placeholder,
+  .todoList__row__date::placeholder {
     color: white;
     font-size: calc(17px + 7 * (100vw - 320px) / 1280); }
 
 .todoList__row__input {
   flex-grow: 5;
   padding: 17px; }
+
+.todoList__row__date {
+  margin: 0 20px;
+  width: 90%; }
 
 .todoList__row__buttonAdd {
   border-radius: 10px;
@@ -202,6 +207,9 @@ footer {
   .todoList__row {
     width: 90%; }
 
+  .todoList__row__date {
+    margin: 0 0px 0 20px; }
+
   .todoList__row__buttonAdd {
     padding: 8px; } }
 .done {
@@ -212,20 +220,23 @@ footer {
     flex-direction: column;
     align-items: normal; }
 
+  .todoList__row__date {
+    margin: 10px 4px 10px 0px; }
+
   .todoList__row__buttonAdd {
     margin: 0px 0 0 0; }
 
   .todoList__row__calendar {
     top: 29px;
     right: 20px; } }
-.todoList__row__date {
-  width: 100%; }
-
 @media (max-width: 529px) {
   html,
   body {
     background: url(../img/mobile.png) black center no-repeat;
     object-fit: contain; }
+
+  .todoList__row__date {
+    height: 63.5px; }
 
   .todoName span {
     margin: 10px 0 10px; }
@@ -233,7 +244,8 @@ footer {
   .head__title span {
     margin: 0; } }
 @media (max-width: 320px) {
-  .todoList__row__input {
+  .todoList__row__input,
+  .todoList__row__date {
     width: 100%; }
 
   .main__result__sub {

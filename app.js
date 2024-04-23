@@ -88,16 +88,14 @@ inputElement.oninput = function () {
 
 // ! Посчитать количество заметок
 
-// function qntTodoList() {
-//   document.querySelector(
-//     ".quantityLength"
-//   ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span> `;
-// }
-// qntTodoList();
+function qntTodoList() {
+  document.querySelector(
+    ".quantityLength"
+  ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span> `;
+}
+qntTodoList();
 
 // ! Добавление задач при клике на кнопку Добавить
-
-document.querySelector(".todoList__row__date").valueAsDate = new Date();
 function addTodo() {
   const inputDueData = document.querySelector(".todoList__row__date");
   const inputElement = document.querySelector(".todoList__row__input");
