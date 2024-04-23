@@ -94,7 +94,7 @@ function qntTodoList() {
   ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span> `;
 }
 qntTodoList();
-
+document.querySelector(".todoList__row__date").valueAsDate = new Date();
 // ! Добавление задач при клике на кнопку Добавить
 function addTodo() {
   const inputDueData = document.querySelector(".todoList__row__date");
