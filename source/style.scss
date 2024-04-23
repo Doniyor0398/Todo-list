@@ -291,11 +291,6 @@ footer {
 	}
 }
 @media (max-width: 320px) {
-	.todoList__row__input,
-	.todoList__row__date {
-		width: 100%;
-		min-width: 250px;
-	}
 	.main__result__sub {
 		justify-content: start;
 		button {
