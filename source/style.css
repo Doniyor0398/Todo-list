@@ -116,7 +116,7 @@ main {
   background: transparent;
   color: white;
   padding: 17px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(23px + 1 * (100vw - 320px) / 1280); }
   .todoList__row__input::placeholder,
   .todoList__row__date::placeholder {
@@ -149,7 +149,7 @@ input[type="date"]:focus {
   padding: 12px; }
 
 .main__error {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   padding: 10px 0 0 10px; }
   .main__error span {
