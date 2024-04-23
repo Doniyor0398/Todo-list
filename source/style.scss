@@ -1,3 +1,12 @@
+// ! Переменые
+$bodyBackground: rgb(13, 7, 20);
+// $bodyBackground: #4c5a68;
+$bodyBackground__color: white;
+h1 {
+	margin: 0;
+	padding: 0;
+	line-height: 30px;
+}
 *,
 *::before,
 *::after {
@@ -6,17 +15,17 @@
 	border: 0;
 	box-sizing: border-box;
 	transition: all 1s;
+	font-family: "Montserrat", sans-serif;
 }
-
 html,
 body {
-	background: #0d0714;
-	color: white;
+	background: $bodyBackground;
+	background: url(../img/Desktop.png) black center no-repeat;
+	object-fit: cover;
+	color: $bodyBackground__color;
 	width: 100%;
 	height: 100vh;
-	font-family: "Italiana", sans-serif;
 }
-
 .wrapper {
 	width: 100%;
 	max-width: 1280px;
@@ -27,37 +36,68 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 }
-
+.head__title__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+}
 .head__title {
 	color: white;
-	font-family: "Italiana", sans-serif;
 	text-align: center;
-	font-size: calc(56px + 35 * (100vw - 320px) / 1280);
-	font-weight: 400;
-	padding: 30px;
+	font-size: calc(18px + 65 * (100vw - 320px) / 1280);
+	font-weight: 200;
+	padding: 10px 30px 0px 15px;
+	span {
+		display: inline-block;
+		font-size: calc(10px + 5 * (100vw - 320px) / 1280);
+		border-top: 1px solid #e91e63;
+		width: 100px;
+		margin: 10px 0 10 0;
+		width: 100%;
+	}
 }
-
+.quantityLength {
+	color: yellow;
+	padding: 10px 30px 0px 15px;
+	position: relative;
+	img {
+		min-width: 50px;
+		width: 50px;
+	}
+	span {
+		position: absolute;
+		left: 50px;
+		top: 0;
+		background: #e91e63;
+		color: white;
+		display: inline-block;
+		text-align: center;
+		border-radius: 50%;
+		width: 30px;
+		padding: 5px;
+	}
+}
 main {
 	flex: 1 1 0;
 }
-
 .todoList__body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 10px 0;
 }
 
 .todoList__row {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
 }
-
 .todoList__row__container__span__input {
 	position: relative;
 }
-
 .todoList__row__calendar {
 	position: absolute;
 	top: 20px;
@@ -67,128 +107,188 @@ main {
 	display: block;
 }
 
-.todoList__row__input,
-.todoList__row__date {
+.todoName {
+	display: flex;
+	flex-direction: column;
+	span {
+		display: block;
+		min-width: 110px;
+		display: block;
+		margin: 15px 0 0;
+		color: #4caf50;
+		cursor: pointer;
+		font-size: calc(15px + 5 * (100vw - 320px) / 1280);
+	}
+}
+.todoList__row__input {
 	cursor: pointer;
 	box-sizing: border-box;
 	border: 1px solid #3e1671;
 	border-radius: 10px;
-	background: transparent;
+	background: #00000038;
+	background: green;
 	color: white;
 	padding: 17px;
-	font-family: inherit;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
-}
-.todoList__row__input::placeholder,
-.todoList__row__date::placeholder {
-	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
-	color: white;
-}
 
+	&::placeholder {
+		color: white;
+		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
+	}
+}
 .todoList__row__input {
-	flex-grow: 4;
+	flex-grow: 5;
+	padding: 17px;
 }
 
-.todoList__row__date {
-	margin: 0 20px;
-}
+// input[type="date"] {
+// 	color: #9e9e9e;
+// 	font-size: calc(18px + 6 * (100vw - 320px) / 1280);
+// 	text-align: left;
+// }
+// input[type="date"]:focus {
+// 	color: white;
+// }
 
 .todoList__row__buttonAdd {
 	border-radius: 10px;
-	background: #9e78cf;
+	background: rgb(158, 120, 207);
 	color: white;
-	font-size: 40px;
+	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
 	flex-grow: 1;
 	min-width: 100px;
+	padding: 12px;
 }
-
 .main__error {
-	font-family: "Italiana", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: 400;
+	padding: 10px 0 0 10px;
+	span {
+		color: white;
+		font-family: inherit;
+	}
 }
-
 .main__result {
 	width: 100%;
 }
-
 .main__result__sub {
+	padding: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
 	border-radius: 10px;
 	background: #221a2d;
-	color: #9e78cf;
+	color: rgb(158, 120, 207);
+	//  font-size: calc(56px + 35 * (100vw - 320px) / 1280);
 	font-weight: 400;
 	line-height: 19px;
-	padding: 10px 15px;
 	margin: 20px 0;
+	// font-size: calc(30px + 5 * (100vw - 320px) / 1280);
 	font-size: 20px;
 	width: 100%;
 	opacity: 3;
-}
-.main__result__sub span {
-	display: block;
-	min-width: 110px;
-	background: #4caf50;
-	color: black;
-	cursor: pointer;
-	font-size: calc(15px + 5 * (100vw - 320px) / 1280);
-	padding: 5px;
-	border-radius: 5px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.main__result__sub .main__result__body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.main__result__sub button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #e91e63;
-	color: black;
-	cursor: pointer;
-	font-weight: bold;
-	font-family: inherit;
-	border-radius: 5px;
-	font-size: calc(15px + 5 * (100vw - 320px) / 1280);
-	padding: 5px;
-	margin: 10px 10px;
-}
-.main__result__sub button img {
-	padding: 0 0 0 5px;
-	margin: 0 10px;
+
+	.main__result__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.main__result__done {
+		background: #4caf50;
+		img {
+			filter: drop-shadow(0 0 20px red);
+		}
+	}
+	button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #e91e63;
+		color: black;
+		cursor: pointer;
+		font-weight: bold;
+		font-family: inherit;
+		border-radius: 5px;
+		font-size: calc(15px + 5 * (100vw - 320px) / 1280);
+		padding: 5px;
+		margin: 10px 10px 10px 0;
+
+		img {
+			padding: 0 0 0 5px;
+			margin: 0 10px;
+		}
+	}
 }
 
 footer {
 	color: white;
-	font-family: "Italiana", sans-serif;
-	padding: 20px;
+	h4 {
+		text-align: center;
+		padding: 10px;
+		font-weight: 100;
+	}
+}
+// ! MEDIA
+@media (max-width: 782px) {
+	.todoList__row__buttonAdd {
+		margin: 10px 0;
+	}
+	.todoList__row {
+		width: 90%;
+	}
+
+	.todoList__row__buttonAdd {
+		padding: 8px;
+	}
+}
+.done {
+	text-decoration: line-through;
 }
 
 @media (max-width: 651px) {
 	.todoList__row {
 		flex-direction: column;
-	}
-
-	.todoList__row__date {
-		margin: 10px 4px 10px 0px;
-		width: 100%;
+		align-items: normal;
 	}
 
 	.todoList__row__buttonAdd {
 		margin: 0px 0 0 0;
 	}
-
 	.todoList__row__calendar {
 		top: 29px;
 		right: 20px;
 	}
 }
+.todoList__row__date {
+	width: 100%;
+}
 @media (max-width: 529px) {
-	.todoList__row__date {
+	html,
+	body {
+		background: url(../img/mobile.png) black center no-repeat;
+		object-fit: contain;
+	}
+
+	.todoName {
+		span {
+			margin: 10px 0 10px;
+		}
+	}
+	.head__title {
+		span {
+			margin: 0;
+		}
+	}
+}
+@media (max-width: 320px) {
+	.todoList__row__input {
 		width: 100%;
+	}
+	.main__result__sub {
+		justify-content: start;
+		button {
+			margin: 0px 10px 0 0;
+		}
 	}
 }
