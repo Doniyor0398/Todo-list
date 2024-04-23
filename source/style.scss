@@ -49,6 +49,7 @@ main {
 
 .todoList__row {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	width: 100%;
 }
