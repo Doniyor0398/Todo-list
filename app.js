@@ -73,7 +73,7 @@ function renderTodoList() {
 
 const inputElement = document.querySelector(".todoList__row__input");
 const btnAdd = document.querySelector(".todoList__row__buttonAdd");
-btnAdd.style.opacity = "0.099";
+btnAdd.style.opacity = "0.5";
 
 inputElement.oninput = function () {
   if (inputElement.value.trim().length === 0) {
