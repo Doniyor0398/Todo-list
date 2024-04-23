@@ -294,17 +294,18 @@ footer {
 	}
 }
 @media (max-width: 320px) {
-	.todoList__row__input,
-	.todoList__row__date {
-		width: 100%;
-	}
+	// .todoList__row__input,
+	// .todoList__row__date {
+	// 	width: 100%;
+	// }
 	.main__result__sub {
 		justify-content: start;
 		button {
 			margin: 0px 10px 0 0;
 		}
 	}
+	.todoList__row__date {
+	}
 	input[type="date"] {
-		width: 252px;
 	}
 }
