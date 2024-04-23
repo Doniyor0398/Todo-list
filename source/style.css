@@ -265,4 +265,7 @@ footer {
   .main__result__sub {
     justify-content: start; }
     .main__result__sub button {
-      margin: 0px 10px 0 0; } }
+      margin: 0px 10px 0 0; }
+
+  input[type="date"] {
+    width: 252px; } }

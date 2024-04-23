@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://doniyor0398.github.io/Todo-list/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Список дел на каждый день">
+    <meta name="Author" content="Абдурасулов Дониёрбек">
+
+    <link rel="icon" href="https://doniyor0398.github.io/Todo-list/img/todo-list_icon.jpg">
+    <!-- ! google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Todo-List_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Todo-List_files/style.css">
+    <title>Todo-List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+        <div class="head__title__body">
+          <div class="head__title__body__row">
+            <h1 class="head__title">
+              Todo list
+              <hr>
+              <span>Список дел</span>
+            </h1>
+          </div>
+          <p class="quantityLength"><img src="./Todo-List_files/iconHeaderRIght.png" alt="iconDelete"> <span>1</span> </p>
+        </div>
+      
+      <main class="main">
+        <div class="todoList__body">
+          <div class="todoList__row">
+            <input type="text" value="Почитать книгу" placeholder="Добавить новую задачу" class="todoList__row__input">
+            <div class="todoList__row__container__span__input">
+              <input id="date" type="date" class="todoList__row__date">
+              <span class="todoList__row__calendar">📅</span>
+            </div>
+
+            <button class="todoList__row__buttonAdd" onclick="addTodo()" style="opacity: 0.5;">
+              Добавить
+            </button>
+          </div>
+        </div>
+        <p class="main__error"></p>
+        <!-- <p class="quantityLength"></p> -->
+        <div class="main__result">
+      <div class="main__result__sub">
+        <div class="todoName" data-index="0">
+        asdfsadf
+        <span>2024-04-23</span>
+        </div>
+         &nbsp;&nbsp; 
+        <div class="main__result__body">
+         <button class="main__result__done" data-index="0">
+         Сделано
+         <img src="./Todo-List_files/doneIcon.svg">
+         </button>
+          <button onclick="
+            todoListArray.splice(0, 1);
+            localStorage.setItem(&#39;todoListArray&#39;,   
+            JSON.stringify(todoListArray));
+            qntTodoList();
+            renderTodoList();          
+            ">Удалить<img src="./Todo-List_files/deleteIcon.svg">
+          </button>
+        </div>
+      </div>
+      </div>
+      </main>
+      <footer>
+        <h4>Abdurasulov Doniyorbek</h4>
+      </footer>
+    </div>
+    <script src="./Todo-List_files/app.js"></script>
+  
+
+</body></html>
