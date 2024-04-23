@@ -128,12 +128,11 @@ main {
 	background: #00000038;
 	color: white;
 	padding: 17px;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
 	min-width: 252px;
 
 	&::placeholder {
-		font-size: calc(18px + 6 * (100vw - 320px) / 1280);
+		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
 		text-align: left;
 	}
 }
@@ -150,6 +149,7 @@ main {
 input[type="date"] {
 	color: #9e9e9e;
 	font-size: calc(18px + 6 * (100vw - 320px) / 1280);
+	text-align: left;
 }
 input[type="date"]:focus {
 	color: white;
