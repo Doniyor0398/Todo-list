@@ -118,8 +118,7 @@ main {
   background: #00000038;
   color: white;
   padding: 17px;
-  font-size: calc(23px + 1 * (100vw - 320px) / 1280);
-  min-width: 252px; }
+  font-size: calc(23px + 1 * (100vw - 320px) / 1280); }
   .todoList__row__input::placeholder,
   .todoList__row__date::placeholder {
     font-size: calc(17px + 7 * (100vw - 320px) / 1280);

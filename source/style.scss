@@ -129,7 +129,6 @@ main {
 	color: white;
 	padding: 17px;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
-	min-width: 252px;
 
 	&::placeholder {
 		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
