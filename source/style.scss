@@ -294,10 +294,10 @@ footer {
 	}
 }
 @media (max-width: 320px) {
-	// .todoList__row__input,
-	// .todoList__row__date {
-	// 	width: 100%;
-	// }
+	.todoList__row__input,
+	.todoList__row__date {
+		width: 100%;
+	}
 	.main__result__sub {
 		justify-content: start;
 		button {
@@ -307,5 +307,15 @@ footer {
 	.todoList__row__date {
 	}
 	input[type="date"] {
+	}
+}
+#myDateInput {
+	width: 200px; /* Установите фиксированную ширину */
+}
+
+@media only screen and (max-width: 600px) {
+	#myDateInput {
+		width: 100%; /* Установите ширину 100%, когда ширина экрана составляет 600px или менее */
+		min-width: 200px; /* Установите минимальную ширину 200px */
 	}
 }
