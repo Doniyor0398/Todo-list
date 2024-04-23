@@ -91,7 +91,7 @@ inputElement.oninput = function () {
 function qntTodoList() {
   document.querySelector(
     ".quantityLength"
-  ).innerHTML = `Количество задач: <span>${todoListArray.length}</span> `;
+  ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span> `;
 }
 qntTodoList();
 

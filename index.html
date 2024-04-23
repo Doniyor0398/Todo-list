@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Список дел на каждый день" />
+    <meta name="Author" content="Абдурасулов Дониёрбек" />
+
     <link rel="icon" href="./img/todo-list_icon.jpg" />
     <!-- ! google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,11 +20,16 @@
   <body>
     <div class="wrapper">
       <head>
-        <h1 class="head__title">
-          Todo list
-          <hr />
-          <span>Список дел</span>
-        </h1>
+        <div class="head__title__body">
+          <div class="head__title__body__row">
+            <h1 class="head__title">
+              Todo list
+              <hr />
+              <span>Список дел</span>
+            </h1>
+          </div>
+          <p class="quantityLength"></p>
+        </div>
       </head>
       <main class="main">
         <div class="todoList__body">
@@ -43,7 +51,7 @@
           </div>
         </div>
         <p class="main__error"></p>
-        <p class="quantityLength"></p>
+        <!-- <p class="quantityLength"></p> -->
         <div class="main__result"></div>
       </main>
       <footer>
