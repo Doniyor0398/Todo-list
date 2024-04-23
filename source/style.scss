@@ -14,14 +14,12 @@ h1 {
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
-	transition: all 1s;
+	transition: all 0.5s;
 	font-family: "Montserrat", sans-serif;
 }
 html,
 body {
 	background: $bodyBackground;
-	background: url(../img/Desktop.png) black center no-repeat;
-	object-fit: cover;
 	color: $bodyBackground__color;
 	width: 100%;
 	height: 100vh;
@@ -125,13 +123,14 @@ main {
 	box-sizing: border-box;
 	border: 1px solid #3e1671;
 	border-radius: 10px;
-	background: #00000038;
+	background: transparent;
 	color: white;
 	padding: 17px;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
 
 	&::placeholder {
-		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
+		font-size: calc(18px + 6 * (100vw - 320px) / 1280);
 		text-align: left;
 	}
 }
@@ -148,7 +147,6 @@ main {
 input[type="date"] {
 	color: #9e9e9e;
 	font-size: calc(18px + 6 * (100vw - 320px) / 1280);
-	text-align: left;
 }
 input[type="date"]:focus {
 	color: white;
@@ -217,7 +215,7 @@ input[type="date"]:focus {
 		border-radius: 5px;
 		font-size: calc(15px + 5 * (100vw - 320px) / 1280);
 		padding: 5px;
-		margin: 10px 10px 10px 0;
+		margin: 10px 10px 0 0;
 
 		img {
 			padding: 0 0 0 5px;
@@ -271,11 +269,6 @@ footer {
 	}
 }
 @media (max-width: 529px) {
-	html,
-	body {
-		background: url(../img/mobile.png) black center no-repeat;
-		object-fit: contain;
-	}
 	.todoList__row__date {
 		width: 100%;
 		height: 63.5px;
