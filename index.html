@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ! google fonts  -->
     <link rel="icon" href="./img/todo-list_icon.jpg" />
+    <!-- ! google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./source/style.css" />
@@ -17,30 +17,33 @@
   <body>
     <div class="wrapper">
       <head>
-        <h1 class="head__title">Todo List</h1>
+        <h1 class="head__title">
+          Todo list
+          <hr />
+          <span>Список дел</span>
+        </h1>
       </head>
       <main class="main">
         <div class="todoList__body">
           <div class="todoList__row">
             <input
               type="text"
+              id="inputField"
               placeholder="Добавить новую задачу"
               class="todoList__row__input"
             />
             <div class="todoList__row__container__span__input">
-              <input type="date" class="todoList__row__date" /><span
-                class="todoList__row__calendar"
-                >📅</span
-              >
+              <input id="date" type="date" class="todoList__row__date" />
+              <span class="todoList__row__calendar">📅</span>
             </div>
 
             <button class="todoList__row__buttonAdd" onclick="addTodo()">
-              +
+              Добавить
             </button>
           </div>
         </div>
         <p class="main__error"></p>
-        <p class="main__todoListLength"></p>
+        <p class="quantityLength"></p>
         <div class="main__result"></div>
       </main>
       <footer>
