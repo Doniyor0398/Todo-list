@@ -3,56 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Список дел на каждый день" />
-    <meta name="Author" content="Абдурасулов Дониёрбек" />
-
-    <link rel="icon" href="./img/todo-list_icon.jpg" />
     <!-- ! google fonts  -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./source/style.css" />
-    <title>Todo-List</title>
+    <title>Document</title>
   </head>
   <body>
     <div class="wrapper">
       <head>
-        <div class="head__title__body">
-          <div class="head__title__body__row">
-            <h1 class="head__title">
-              Todo list
-              <hr />
-              <span>Список дел</span>
-            </h1>
-          </div>
-          <p class="quantityLength"></p>
-        </div>
+        <h1 class="head__title">Todo List</h1>
       </head>
       <main class="main">
         <div class="todoList__body">
           <div class="todoList__row">
             <input
               type="text"
-              value="Почитать книгу"
               placeholder="Добавить новую задачу"
               class="todoList__row__input"
             />
-            <div class="todoList__row__container__span__input">
-              <!-- <input id="date" type="date" class="todoList__row__date" /> -->
-              <input type="date" id="myDateInput" class="todoList__row__date" />
-              <span class="todoList__row__calendar">📅</span>
-            </div>
-
+            <input type="date" class="todoList__row__date" />
             <button class="todoList__row__buttonAdd" onclick="addTodo()">
-              Добавить
+              +
             </button>
           </div>
         </div>
         <p class="main__error"></p>
-        <!-- <p class="quantityLength"></p> -->
         <div class="main__result"></div>
       </main>
       <footer>
@@ -61,4 +42,4 @@
     </div>
     <script src="./app.js"></script>
   </body>
-</html>
+</html
