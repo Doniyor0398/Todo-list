@@ -127,11 +127,13 @@ main {
 	border: 1px solid #3e1671;
 	border-radius: 10px;
 	background: #00000038;
+	background: green;
 	color: white;
 	padding: 17px;
 	font-size: calc(23px + 1 * (100vw - 320px) / 1280);
 
 	&::placeholder {
+		color: white;
 		font-size: calc(17px + 7 * (100vw - 320px) / 1280);
 	}
 }
@@ -141,7 +143,7 @@ main {
 }
 .todoList__row__date {
 	margin: 0 20px;
-	flex-grow: 5;
+	width: 90%;
 }
 
 // input[type="date"] {
