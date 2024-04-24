@@ -38,7 +38,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
+	margin: 30px 30px;
 }
 .head__title {
 	color: white;
@@ -164,7 +164,7 @@ input[type="date"]:focus {
 .main__error {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
-	padding: 10px 0 0 10px;
+	padding: 10px 0 0 15px;
 	span {
 		color: white;
 		font-family: inherit;
