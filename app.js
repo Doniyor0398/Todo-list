@@ -5,8 +5,10 @@ if (getTodoListArray) {
   todoListArray = JSON.parse(getTodoListArray);
 }
 
-renderTodoList();
-applyDoneStyles();
+window.onload = function () {
+  renderTodoList();
+  applyDoneStyles();
+};
 
 function renderTodoList() {
   let todoListHTML = "";
@@ -65,7 +67,6 @@ function renderTodoList() {
       } else {
         todoNameElement.classList.add("done");
         buttonDone.style.background = "#4caf50";
-        console.log(buttonDone);
         todoListArray[index].done = true;
       }
       localStorage.setItem("todoListArray", JSON.stringify(todoListArray));
@@ -79,8 +80,12 @@ function applyDoneStyles() {
     const todoNameElement = document.querySelector(
       `.todoName[data-index="${index}"]`
     );
+    const buttonDone = document.querySelector(
+      `.main__result__done[data-index="${index}"]`
+    );
     if (task.done && todoNameElement) {
       todoNameElement.classList.add("done");
+      buttonDone.style.background = "#4caf50";
     }
   });
 }
