@@ -197,8 +197,8 @@ input[type="date"]:focus {
 		align-items: center;
 	}
 	.main__result__done {
-		background: #4caf50;
-		img {
+		background: #9c27b0;
+		b img {
 			filter: drop-shadow(0 0 20px red);
 		}
 	}
@@ -224,6 +224,10 @@ input[type="date"]:focus {
 	}
 }
 
+.done {
+	text-decoration: line-through;
+}
+
 footer {
 	color: white;
 	h4 {
@@ -246,9 +250,6 @@ footer {
 	.todoList__row__buttonAdd {
 		padding: 8px;
 	}
-}
-.done {
-	text-decoration: line-through;
 }
 
 @media (max-width: 651px) {

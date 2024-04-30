@@ -179,8 +179,8 @@ input[type="date"]:focus {
     justify-content: center;
     align-items: center; }
   .main__result__sub .main__result__done {
-    background: #4caf50; }
-    .main__result__sub .main__result__done img {
+    background: #9c27b0; }
+    .main__result__sub .main__result__done b img {
       filter: drop-shadow(0 0 20px red); }
   .main__result__sub button,
   .main__result__sub .todoList__row__date {
@@ -201,6 +201,9 @@ input[type="date"]:focus {
       padding: 0 0 0 5px;
       margin: 0 10px; }
 
+.done {
+  text-decoration: line-through; }
+
 footer {
   color: white; }
   footer h4 {
@@ -220,9 +223,6 @@ footer {
 
   .todoList__row__buttonAdd {
     padding: 8px; } }
-.done {
-  text-decoration: line-through; }
-
 @media (max-width: 651px) {
   .todoList__row {
     flex-direction: column;

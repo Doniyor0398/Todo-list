@@ -1,11 +1,12 @@
-let todoListArray = []; // ! пустой массив
-let getTodoListArray = localStorage.getItem("todoListArray"); // ! получаем данные от local.setItem по кулючу todoListArray
+let todoListArray = []; // Пустой массив
+let getTodoListArray = localStorage.getItem("todoListArray"); // Получаем данные из localStorage по ключу "todoListArray"
 
 if (getTodoListArray) {
   todoListArray = JSON.parse(getTodoListArray);
 }
 
 renderTodoList();
+applyDoneStyles();
 
 function renderTodoList() {
   let todoListHTML = "";
@@ -17,32 +18,30 @@ function renderTodoList() {
     let html = `
       <div class="main__result__sub">
         <div class="todoName" data-index="${i}">
-        ${todoName}
-        <span>${dueDate}</span>
+          ${todoName}
+          <span>${dueDate}</span>
         </div>
-         &nbsp;&nbsp; 
         <div class="main__result__body">
-         <button class="main__result__done" data-index="${i}">
-         Сделано
-         <img src="./img/doneIcon.svg"/>
-         </button>
-          <button 
-            onclick="
+          <button class="main__result__done" data-index="${i}">
+            Сделано
+            <img src="./img/doneIcon.svg"/>
+          </button>
+          <button onclick="
             todoListArray.splice(${i}, 1);
-            localStorage.setItem('todoListArray',   
-            JSON.stringify(todoListArray));
+            localStorage.setItem('todoListArray', JSON.stringify(todoListArray));
             qntTodoList();
             renderTodoList();          
-            ">Удалить<img src="./img/deleteIcon.svg"/>
-          </button>
+          ">Удалить<img src="./img/deleteIcon.svg"/></button>
         </div>
-      </div>
-      `;
+      </div>`;
 
     todoListHTML += html;
   }
+
   document.querySelector(".main__result").innerHTML = todoListHTML;
-  // ! Функции  При клике на кнопку Сделано, зачерковать текст
+
+  // При клике на кнопку "Сделано", изменяем стиль и сохраняем состояние
+
   document.querySelectorAll(".main__result__done").forEach((button) => {
     button.addEventListener("click", function () {
       const index = this.getAttribute("data-index");
@@ -54,21 +53,36 @@ function renderTodoList() {
     const todoNameElement = document.querySelector(
       `.todoName[data-index="${index}"]`
     );
+    const buttonDone = document.querySelector(
+      `.main__result__done[data-index="${index}"]`
+    );
 
     if (todoNameElement) {
       if (todoNameElement.classList.contains("done")) {
         todoNameElement.classList.remove("done");
+        buttonDone.style.background = "#9c27b0";
         todoListArray[index].done = false;
       } else {
         todoNameElement.classList.add("done");
+        buttonDone.style.background = "#4caf50";
+        console.log(buttonDone);
         todoListArray[index].done = true;
       }
-
       localStorage.setItem("todoListArray", JSON.stringify(todoListArray));
-    } else {
-      console.warn(`Элемент с индексом ${index} не найден`);
     }
   }
+  applyDoneStyles();
+}
+
+function applyDoneStyles() {
+  todoListArray.forEach((task, index) => {
+    const todoNameElement = document.querySelector(
+      `.todoName[data-index="${index}"]`
+    );
+    if (task.done && todoNameElement) {
+      todoNameElement.classList.add("done");
+    }
+  });
 }
 
 const inputElement = document.querySelector(".todoList__row__input");
@@ -78,24 +92,24 @@ btnAdd.style.opacity = "0.5";
 inputElement.oninput = function () {
   if (inputElement.value.trim().length === 0) {
     btnAdd.setAttribute("disabled", "");
-    return;
   } else {
-    btnAdd.removeAttribute("disabled", "");
+    btnAdd.removeAttribute("disabled");
     btnAdd.style.cursor = "pointer";
     btnAdd.style.opacity = "1";
   }
 };
 
-// ! Посчитать количество заметок
-
+// Подсчет количества задач
 function qntTodoList() {
   document.querySelector(
     ".quantityLength"
-  ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span> `;
+  ).innerHTML = `<img src="./img/iconHeaderRIght.png" alt="iconDelete" /> <span>${todoListArray.length}</span>`;
 }
 qntTodoList();
+
 document.querySelector(".todoList__row__date").valueAsDate = new Date();
-// ! Добавление задач при клике на кнопку Добавить
+
+// Добавление задачи при клике на кнопку "Добавить"
 function addTodo() {
   const inputDueData = document.querySelector(".todoList__row__date");
   const inputElement = document.querySelector(".todoList__row__input");
@@ -108,25 +122,26 @@ function addTodo() {
     errorElement.innerHTML = `Пожалуйста, заполните все обязательные поля перед продолжением:🗒 <span>Готовить ужин</span>`;
     return;
   } else if (inputDueData.value === "") {
-    errorElement.innerHTML = `Пожалуйста, заполните все обязательные поля перед продолжением:📅 17-03-2024`;
+    errorElement.innerHTML = `Пожалуйста, заполните все обязательные поля перед продолжением:📅<span> 17-03-2024</span>`;
     errorElement.style.padding = "0px";
     errorElement.style.padding = "20px";
     return;
   }
 
   errorElement.innerHTML = "";
-
+  btnAdd.style.opacity = "0.5";
   if (todoListArray) {
-    todoListArray.push({ todoName, dueDate });
+    todoListArray.push({ todoName, dueDate, done: false });
   } else {
-    todoListArray = [{ todoName, dueDate }];
+    todoListArray = [{ todoName, dueDate, done: false }];
   }
 
   inputElement.value = "";
 
   qntTodoList();
+  applyDoneStyles();
   renderTodoList();
 
-  // ! SET LOCAL STORAGE
+  // Сохранение в localStorage
   localStorage.setItem("todoListArray", JSON.stringify(todoListArray));
 }
