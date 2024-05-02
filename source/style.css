@@ -32,9 +32,13 @@ body {
 
 .head__title__body {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 30px 30px; }
+  .head__title__body img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 50%; }
 
 .head__title {
   color: white;
