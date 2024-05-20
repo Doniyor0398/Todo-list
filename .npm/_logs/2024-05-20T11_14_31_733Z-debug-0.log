@@ -1,0 +1,87 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.2
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 3ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/Users/abdurasulov.doniyorbek.inbox.ru/Library/Caches/typescript/5.3/.npmrc Completed in 1ms
+10 timing config:load:project Completed in 18ms
+11 timing config:load:file:/Users/abdurasulov.doniyorbek.inbox.ru/.npmrc Completed in 4ms
+12 timing config:load:user Completed in 4ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 4ms
+17 timing config:load:setEnvs Completed in 3ms
+18 timing config:load Completed in 39ms
+19 timing npm:load:configload Completed in 39ms
+20 timing npm:load:mkdirpcache Completed in 2ms
+21 timing npm:load:mkdirplogs Completed in 1ms
+22 verbose title npm install types-registry@latest
+23 verbose argv "install" "--ignore-scripts" "types-registry@latest"
+24 timing npm:load:setTitle Completed in 35ms
+25 timing config:load:flatten Completed in 5ms
+26 timing npm:load:display Completed in 8ms
+27 verbose logfile logs-max:10 dir:/Users/abdurasulov.doniyorbek.inbox.ru/.npm/_logs
+28 verbose logfile /Users/abdurasulov.doniyorbek.inbox.ru/.npm/_logs/2024-05-20T11_14_31_733Z-debug-0.log
+29 timing npm:load:logFile Completed in 11ms
+30 timing npm:load:timers Completed in 1ms
+31 timing npm:load:configScope Completed in 0ms
+32 timing npm:load Completed in 98ms
+33 timing arborist:ctor Completed in 2ms
+34 silly logfile start cleaning logs, removing 1 files
+35 silly logfile done cleaning log files
+36 timing idealTree:init Completed in 29ms
+37 timing arborist:ctor Completed in 1ms
+38 http fetch GET 200 https://registry.npmjs.org/types-registry 70161ms (cache stale)
+39 timing idealTree:userRequests Completed in 70176ms
+40 silly idealTree buildDeps
+41 silly fetch manifest types-registry@0.1.685
+42 silly placeDep ROOT types-registry@0.1.685 REPLACE for:  want: 0.1.685
+43 timing idealTree:#root Completed in 10ms
+44 timing idealTree:node_modules/types-registry Completed in 0ms
+45 timing idealTree:buildDeps Completed in 12ms
+46 timing idealTree:fixDepFlags Completed in 0ms
+47 timing idealTree Completed in 70220ms
+48 timing reify:loadTrees Completed in 70221ms
+49 timing reify:diffTrees Completed in 2ms
+50 silly reify moves {}
+51 timing reify:retireShallow Completed in 2ms
+52 timing reify:createSparse Completed in 0ms
+53 timing reify:loadBundles Completed in 0ms
+54 silly audit bulk request { 'types-registry': [ '0.1.685' ] }
+55 timing reify:unpack Completed in 1ms
+56 timing reify:unretire Completed in 0ms
+57 timing build:queue Completed in 0ms
+58 timing build:deps Completed in 1ms
+59 timing build Completed in 1ms
+60 timing reify:build Completed in 1ms
+61 timing reify:trash Completed in 0ms
+62 silly audit bulk request failed undefined
+63 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/audits/quick failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+63 verbose audit error     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+63 verbose audit error     at ClientRequest.emit (node:events:513:28)
+63 verbose audit error     at TLSSocket.socketErrorListener (node:_http_client:494:9)
+63 verbose audit error     at TLSSocket.emit (node:events:525:35)
+63 verbose audit error     at emitErrorNT (node:internal/streams/destroy:157:8)
+63 verbose audit error     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+63 verbose audit error     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+63 verbose audit error   code: 'ENOTFOUND',
+63 verbose audit error   errno: 'ENOTFOUND',
+63 verbose audit error   syscall: 'getaddrinfo',
+63 verbose audit error   hostname: 'registry.npmjs.org',
+63 verbose audit error   type: 'system'
+63 verbose audit error }
+64 silly audit error undefined
+65 timing auditReport:getReport Completed in 30ms
+66 silly audit report null
+67 timing reify:audit Completed in 30ms
+68 timing reify:save Completed in 13ms
+69 timing reify Completed in 70267ms
+70 timing command:install Completed in 70274ms
+71 verbose exit 0
+72 timing npm Completed in 70754ms
+73 info ok

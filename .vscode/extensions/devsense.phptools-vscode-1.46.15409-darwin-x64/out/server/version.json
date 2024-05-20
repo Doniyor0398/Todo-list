@@ -1,0 +1,5 @@
+{
+    "target": "darwin-x64",
+    "runtime": "osx-x64",
+    "version": "1.46.15409"
+}
