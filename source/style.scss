@@ -160,6 +160,7 @@ main {
 .todoList__row__input {
 	flex-grow: 5;
 	padding: 17px;
+
 }
 
 .todoList__row__date {
@@ -282,6 +283,10 @@ footer {
 	filter: drop-shadow(0px 0px 20px white);
 }
 
+.link__developer__doni {
+	color: green;
+	padding: 0 20px 0;
+}
 
 // ! MEDIA
 @media (max-width: 782px) {
