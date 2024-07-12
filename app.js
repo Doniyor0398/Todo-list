@@ -12,24 +12,22 @@ window.onload = function () {
 
 function renderTodoList() {
   let todoListHTML = "";
-
-  for (let i = 0; i < todoListArray.length; i++) {
-    let todoListArrayvalue = todoListArray[i];
+  todoListArray.forEach(function (todoListArrayvalue, index) {
     let { todoName, dueDate } = todoListArrayvalue;
 
     let html = `
       <div class="main__result__sub">
-        <div class="todoName" data-index="${i}">
+        <div class="todoName" data-index="${index}">
           ${todoName}
           <span>${dueDate}</span>
         </div>
         <div class="main__result__body">
-          <button class="main__result__done" data-index="${i}">
+          <button class="main__result__done" data-index="${index}">
             Сделано
             <img src="./img/doneIcon.svg"/>
           </button>
           <button onclick="
-            todoListArray.splice(${i}, 1);
+            todoListArray.splice(${index}, 1);
             localStorage.setItem('todoListArray', JSON.stringify(todoListArray));
             qntTodoList();
             renderTodoList();          
@@ -38,7 +36,7 @@ function renderTodoList() {
       </div>`;
 
     todoListHTML += html;
-  }
+  });
 
   document.querySelector(".main__result").innerHTML = todoListHTML;
 
