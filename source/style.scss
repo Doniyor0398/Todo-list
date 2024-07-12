@@ -271,10 +271,17 @@ footer {
 }
 
 .moris {
-	font-size: calc(50px + 10 * (100vw - 320px) / 1280);
+	font-size: calc(30px + 10 * (100vw - 320px) / 1280);
 	color: gold;
 	font-weight: 600;
 }
+
+.head__title__body img {
+	width: 50px;
+	max-width: 100%;
+	filter: drop-shadow(0px 0px 20px white);
+}
+
 
 // ! MEDIA
 @media (max-width: 782px) {
