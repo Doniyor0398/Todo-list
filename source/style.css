@@ -215,6 +215,11 @@ footer {
     padding: 10px;
     font-weight: 100; }
 
+.moris {
+  font-size: calc(50px + 10 * (100vw - 320px) / 1280);
+  color: gold;
+  font-weight: 600; }
+
 @media (max-width: 782px) {
   .todoList__row__buttonAdd {
     margin: 10px 0; }
